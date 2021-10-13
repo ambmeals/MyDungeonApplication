@@ -35,7 +35,7 @@ namespace MyDungeon
                 Console.WriteLine(" [P]otions:         $" + potionP);
                 Console.WriteLine(" [D]ifficulty Mod:   $" + difP);
                 Console.WriteLine("-----------------------");
-                Console.WriteLine(" [E]xit ");
+                Console.WriteLine(" [E]xit Shop");
                 Console.WriteLine();
                 Console.WriteLine(p.name + "'s Stats");
                 Console.WriteLine("-----------------------");
@@ -62,8 +62,9 @@ namespace MyDungeon
                 }
                 else if (input == "d" || input == "difficultymod")
                 {
-                    TryBuy("difficulty Mod", difP, p);
+                    TryBuy("dif", difP, p);
                 }
+                
                 else if (input == "e" || input == "exit")
                     break;
             }

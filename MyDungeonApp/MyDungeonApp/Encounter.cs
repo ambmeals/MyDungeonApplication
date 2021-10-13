@@ -19,39 +19,82 @@ namespace MyDungeon
         public static void FirstEncounter()
         {
             Console.WriteLine("You stumble over piles of books while trying to reach your captor.\n" +
-                "Luckily, while stumbling, you grab a rusty fork.");
-            Console.WriteLine("The Zombie Cyborg turns around....");
+                "Luckily, while stumbling, you're able to grab a sharp fork.");
+            Console.WriteLine("Lord Farquaad begins to turn around....");
             Console.ReadKey();
-            Combat(false, "Zombie Cyborg", 1, 4);
+            Combat(false, "Lord Farquaad", 1, 4);
         }
 
         public static void BasicFightEncounter()
         {
             Console.Clear();
-            Console.WriteLine(" You turn the corner and there you see a grim shadow...\n");
+            Console.WriteLine(" You turn the corner and there you see another figure in your way...\n");
             Console.ReadKey();
             Combat(true, "", 0, 0);
         }
 
         //EXTRA ENOUNTERS
-        public static void WizardEnocunter()
+        public static void Rumplestiltskin()
         {
             Console.Clear();
             Console.WriteLine(" The door suddenly bursts open with a gust of wind.\n" +
-                " You see a tall man in crazy ugly wrags...\n");
-            Console.WriteLine(" He licks his lips as he looks at you like you're dinner.\n ");
+                " You see a short man covered in gold...\n");
+            Console.WriteLine(" He claps his hands and suddently is holding two gold knives...\n ");
             Console.ReadKey();
-            Combat(false, " Cannibal Wizard, enjoys eating a brain or two ", 4, 2);
+            Combat(false, " Rumplestiltskin", 2, 6);
         }
 
-        public static void PowerfulVampire()
+        public static void WaffleMan()
         {
             Console.Clear();
             Console.WriteLine(" You peer down the long dark hallway...\n" +
-                " It reeks of alcohol and cheetos ");
-            Console.WriteLine(" A large sparkley vampire appears before you.\n ");
+                " It reeks of alcohol and syrup ");
+            Console.WriteLine(" A large....WAFFLE MAN?! appears before you.\n " +
+                "Maybe he had something to do with your syrup bath....");
             Console.ReadKey();
-            Combat(false, " Powerful Vampire, really enjoys drunk humans ", 6, 3);
+            Combat(false, " Waffle Man", 3, 5);
+        }
+
+        public static void FairyGodmother()
+        {
+            Console.Clear();
+            Console.WriteLine(" You open a window to maybe jump out of this place...\n" +
+                " Suddenly, a sound of buzzing fills your ears ");
+            Console.WriteLine(" Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
+                " Are you going to take that from a bedazzled lady?! ");
+            Console.ReadKey();
+            Combat(false, " Fairy Godmother", 5, 9);
+        }
+
+        public static void CaptainHook()
+        {
+            Console.Clear();
+            Console.WriteLine(" You turn a corner and feel like you might be getting out of this maze...\n" +
+                " A hearty laugh comes from behind you ");
+            Console.WriteLine(" Captain Hook stands behind you, creating a melody with his hook\n" +
+                " You can't lie, the tune is a BOP! Too bad it is about your impending doom...");
+            Console.ReadKey();
+            Combat(false, " Captain Hook ", 2, 7);
+        }
+
+        public static void JackandJill()
+        {
+            Console.Clear();
+            Console.WriteLine(" You're catching your breathe when you suddenly smell something terribly to sweet ");
+            Console.WriteLine(" Two plump figures with terrible haircuts and out of season lederhosen stand before you\n" +
+                " You can't tell if they are couple or related...gross...");
+            Console.ReadKey();
+            Combat(false, " Jack and Jill ", 3, 8);
+        }
+
+        public static void PuppetMaster()
+        {
+            Console.Clear();
+            Console.WriteLine(" Suddenly you are surrounded by tiny puppets hitting your knees ");
+            Console.WriteLine(" At first it's funny, maybe even charming...\n" +
+                "Then a puppet pulls out a fight and you know you what you must do!");
+            Console.ReadKey();
+            Combat(false, " Puppet Master ", 2, 4);
         }
 
 
@@ -59,17 +102,30 @@ namespace MyDungeon
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 2))
+            switch (rand.Next(0, 6))
             {
                 case 0:
                     BasicFightEncounter();
                     break;
                 case 1:
-                    WizardEnocunter();
+                    Rumplestiltskin();
                     break;
                 case 2:
-                    PowerfulVampire();
+                    WaffleMan();
                     break;
+                case 3:
+                    FairyGodmother();
+                        break;
+                case 4:
+                    CaptainHook();
+                    break;
+                case 5:
+                    JackandJill();
+                    break;
+                case 6:
+                    PuppetMaster();
+                    break;
+
             }
         }
 
@@ -106,8 +162,8 @@ namespace MyDungeon
                 if (input.ToLower() == "a" || input.ToLower() == "attack")
                 {
                     //ATTACK
-                    Console.WriteLine(" With ninja like reflexes, you stick your weapon right in their eye!\n" +
-                        "The " + n + " bites your ankle ");
+                    Console.WriteLine(" With quick incredible reflexes, you stick your weapon right into your enemy!\n" +
+                        "The " + n + " gives you a sock on the back ");
                     //power of the enemy minus your current player armor
                     //higher armor value will not damage as easily
                     int damage = p - Program.currentPlayer.armorValue;
@@ -122,7 +178,7 @@ namespace MyDungeon
                 else if (input.ToLower() == "d" || input.ToLower() == "defend")
                 {
                     //DEFEND
-                    Console.WriteLine(" As the " + n + " prepares to smack it down on you,\n" +
+                    Console.WriteLine(" As " + n + " prepares to smack it down on you,\n" +
                         " you ready your fork for defense... ");
                     //the power of the opponent will be divided by 4
                     int damage = (p / 4) - Program.currentPlayer.armorValue;
@@ -139,8 +195,8 @@ namespace MyDungeon
                     //RUN
                     if (rand.Next(0, 2) == 0)
                     {
-                        Console.WriteLine(" As you dash away from, " + n + " it scratches your shoulder and strikes you.\n+" +
-                            " You fly forward. ");
+                        Console.WriteLine(" As you dash away from, " + n + " scratches your shoulder and strikes you.\n" + " You fly forward. ");
+
                         int damage = p - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
@@ -167,7 +223,8 @@ namespace MyDungeon
                         int damage = p - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
-                        Console.WriteLine(" The " + n + "  smacks your head into see butterflies. You lose " + damage + " health! ");
+                        Console.WriteLine("" + n + "  smacks your head and you and candy drops see butterflies. \n" +
+                            "You lose " + damage + " health! ");
                     }
                     else
                     {
@@ -187,8 +244,8 @@ namespace MyDungeon
                 if (Program.currentPlayer.health <= 0)
                 {
                     //DEATH CODE
-                    Console.WriteLine(" As the" + n + " stands proudly over you, they easily strike you dead. " + n +
-                        "/nEasily killed you");
+                    Console.WriteLine(" As " + n + " stands proudly over you, they easily strike you dead. " + n +
+                        "\nEasily killed you");
                     Console.ReadKey();
                     System.Environment.Exit(0);
                 }
@@ -209,29 +266,29 @@ namespace MyDungeon
             switch (rand.Next(0, 10))
             {
                 case 0:
-                    return "Skeleton";
+                    return "Captain of Duloc";
                 case 1:
-                    return "Flesh Eating Zombie";
+                    return "Headless Horseman";
                 case 2:
-                    return "Greater Mutant";
+                    return "Duloc Mascot";
                 case 3:
-                    return "Ghoul";
+                    return "Angry Mob";
                 case 4:
-                    return "Nightwraith";
+                    return "Kyle";
                 case 5:
-                    return "Drowner";
+                    return "Cyclops";
                 case 6:
-                    return "Werewolf";
+                    return "Gnomes";
                 case 7:
-                    return "Pixie";
+                    return "Dragon";
                 case 8:
-                    return "Siren";
+                    return "Thumbelina";
                 case 9:
-                    return "Griffin";
+                    return "Pirates";
                 case 10:
-                    return "Succubus";
+                    return "Witches";
             }
-            return "Cyborg";
+            return "Prince Charming";
         }
 
     } //END CLASS

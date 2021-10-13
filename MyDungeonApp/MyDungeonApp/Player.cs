@@ -11,6 +11,7 @@ namespace MyDungeon
         Random rand = new Random();
 
         public string name;
+        public int id;
         public int coins = 3000;
         public int health = 10;
         public int armorValue = 0;
