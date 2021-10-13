@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyDungeon;
 
-namespace MyDungeon
+namespace DungeonLibrary
 {
     public class Shop
     {
@@ -75,7 +76,7 @@ namespace MyDungeon
                 {
                     TryBuy("dif", difP, p);
                 }
-                
+
                 else if (input == "e" || input == "exit")
                     break;
             }
