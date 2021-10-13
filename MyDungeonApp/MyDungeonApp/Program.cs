@@ -10,7 +10,7 @@ namespace MyDungeon
   
     public class Program
     {
-        
+
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
 
