@@ -33,10 +33,21 @@ namespace MyDungeon
                 Console.WriteLine(" [W]eapon:          $" + weaponP);
                 Console.WriteLine(" [A]rmor:           $" + armorP);
                 Console.WriteLine(" [P]otions:         $" + potionP);
-                Console.WriteLine(" [D]ifficulty Mod:   $" + difP);
+                Console.WriteLine(" [D]ifficulty Mod:  $" + difP);
                 Console.WriteLine("-----------------------");
                 Console.WriteLine(" [E]xit Shop");
-                Console.WriteLine();
+                Console.WriteLine("");
+                string title =
+
+          @" ----------------------------------------------------------
+        UUUUUUUUU| HHHHHHHHHH    |            |AAAAAAAA     |UUUU
+        UUUUUU C |HHHHHHHHHHHHH  | LLLL       |AAAAAAAAAAA  |UUUUU
+        UUUUU /\_________ HHHHHH |LLLLLLLLLL  |AAAAAAAAAAAAA|UUUUU
+        ==== /    |######| =======================================
+        QQQQ |\   |#####/  PPPPP |   UU       |   IIIIIIIL  |   TT
+        QQQ / |   |<_____ PPPPPP | UUUUUUUU   | IIIIIIILLLLL| TTTT
+        === ` `   o      o =======================================";
+                Console.WriteLine(title);
                 Console.WriteLine(p.name + "'s Stats");
                 Console.WriteLine("-----------------------");
                 Console.WriteLine("Current Health: " + p.health);

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyDungeon
 {
-    [Serializable]
-
+  
     public class Program
     {
+        
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
 
@@ -28,7 +28,29 @@ namespace MyDungeon
         //initiate beginning (method)
         static void Start()
         {
-            Console.WriteLine("Welcome to My Dungeon");
+            Console.Title = " Dungeon of DOOM! ft. Shrek LOL: ";
+            Console.WriteLine("               Welcome to My Dungeon     ");
+            string title =
+
+               
+                @"                    ______
+                  .-      -.
+                 /            \
+                |              |
+                |,  .-.  .-.  ,|
+                | )(__/  \__)( |
+                |/     /\     \|
+      (@_       (_     ^^     _)
+ _     ) \_______\__|IIIIII|__/__________________________
+(_)@8@8{}<________|-\IIIIII/-|___________________________>
+       )_/        \          /
+      (@           `--------` 
+
+
+                                              ";
+
+
+            Console.WriteLine(title);
             Console.WriteLine("Who are you?: ");
             //waiting for user response
             currentPlayer.name = Console.ReadLine();

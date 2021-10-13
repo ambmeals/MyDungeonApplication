@@ -22,7 +22,7 @@ namespace MyDungeon
                 "Luckily, while stumbling, you're able to grab a sharp fork.");
             Console.WriteLine("Lord Farquaad begins to turn around....");
             Console.ReadKey();
-            Combat(false, "Lord Farquaad", 1, 4);
+            Combat(false, "Lord Farquaad", 1, 3);
         }
 
         public static void BasicFightEncounter()
@@ -39,9 +39,9 @@ namespace MyDungeon
             Console.Clear();
             Console.WriteLine(" The door suddenly bursts open with a gust of wind.\n" +
                 " You see a short man covered in gold...\n");
-            Console.WriteLine(" He claps his hands and suddently is holding two gold knives...\n ");
+            Console.WriteLine(" He claps his hands and suddenly is holding two gold knives...\n ");
             Console.ReadKey();
-            Combat(false, " Rumplestiltskin", 2, 6);
+            Combat(false, " Rumplestiltskin", 2, 3);
         }
 
         public static void WaffleMan()
@@ -49,10 +49,10 @@ namespace MyDungeon
             Console.Clear();
             Console.WriteLine(" You peer down the long dark hallway...\n" +
                 " It reeks of alcohol and syrup ");
-            Console.WriteLine(" A large....WAFFLE MAN?! appears before you.\n " +
+            Console.WriteLine(" A large....WAFFLE MAN?! Appears before you.\n " +
                 "Maybe he had something to do with your syrup bath....");
             Console.ReadKey();
-            Combat(false, " Waffle Man", 3, 5);
+            Combat(false, " Waffle Man", 1, 3);
         }
 
         public static void FairyGodmother()
@@ -63,7 +63,7 @@ namespace MyDungeon
             Console.WriteLine(" Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
                 " Are you going to take that from a bedazzled lady?! ");
             Console.ReadKey();
-            Combat(false, " Fairy Godmother", 5, 9);
+            Combat(false, " Fairy Godmother", 1, 4);
         }
 
         public static void CaptainHook()
@@ -74,7 +74,7 @@ namespace MyDungeon
             Console.WriteLine(" Captain Hook stands behind you, creating a melody with his hook\n" +
                 " You can't lie, the tune is a BOP! Too bad it is about your impending doom...");
             Console.ReadKey();
-            Combat(false, " Captain Hook ", 2, 7);
+            Combat(false, " Captain Hook ", 2, 4);
         }
 
         public static void JackandJill()
@@ -84,7 +84,7 @@ namespace MyDungeon
             Console.WriteLine(" Two plump figures with terrible haircuts and out of season lederhosen stand before you\n" +
                 " You can't tell if they are couple or related...gross...");
             Console.ReadKey();
-            Combat(false, " Jack and Jill ", 3, 8);
+            Combat(false, " Jack and Jill ", 3, 4);
         }
 
         public static void PuppetMaster()
@@ -97,12 +97,24 @@ namespace MyDungeon
             Combat(false, " Puppet Master ", 2, 4);
         }
 
+        public static void Shrek()
+        {
+            Console.Clear();
+            Console.WriteLine(" You hear a loud stomping coming from down the hall ");
+            Console.WriteLine(" It rattles the stones beneath your feet...\n" +
+                " Shrek comes from behind the wall and is using a human bone to pluck his teeth!\n" +
+                " You think he is there to help but he starts licking his lips as he is looking at you.\n" +
+                "Says, 'he hopes you've kept the fork for him to use on you! ");
+            Console.ReadKey();
+            Combat(false, " Shrek ", 1, 4);
+        }
+
 
 
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 6))
+            switch (rand.Next(0, 8))
             {
                 case 0:
                     BasicFightEncounter();
@@ -129,7 +141,7 @@ namespace MyDungeon
             }
         }
 
-        //bool will ask if the combat is a radnom creature or specilized
+        //bool will ask if the combat is a random creature or specilized
         public static void Combat(bool random, string name, int power, int health)
         {
             string n = "";
