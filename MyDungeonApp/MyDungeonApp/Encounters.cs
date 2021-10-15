@@ -20,7 +20,8 @@ namespace MyDungeonApp
         //void will not return a variable
         public static void FirstEncounter()
         {
-            Console.WriteLine("You stumble over piles of books while trying to reach your captor.\n" +
+            Console.WriteLine("You can't believe how short all of the furniture is..." +
+                "You stumble over piles of books while trying to reach your captor.\n" +
                 "Luckily, while stumbling, you're able to grab a sharp fork.");
             Console.WriteLine("Lord Farquaad begins to turn around....");
             Console.ReadKey();
@@ -30,7 +31,8 @@ namespace MyDungeonApp
         public static void BasicFightEncounter()
         {
             Console.Clear();
-            Console.WriteLine(" You turn the corner and there you see another figure in your way...\n");
+            Console.WriteLine("You turn the corner and there you see another figure in your way...\n" +
+                "These halls seem never ending like an illusion.");
             Console.ReadKey();
             Combat(true, "", 0, 0);
         }
@@ -39,9 +41,12 @@ namespace MyDungeonApp
         public static void Rumplestiltskin()
         {
             Console.Clear();
-            Console.WriteLine(" The door suddenly bursts open with a gust of wind.\n" +
-                " You see a short man covered in gold...\n");
-            Console.WriteLine(" He claps his hands and suddenly is holding two gold knives...\n ");
+            Console.WriteLine("You've found some solitude and safety in a room with wool threading spools.\n" +
+                "THey all glitter covered in gold threads.\n" +
+                "The door suddenly bursts open with a gust of wind.\n" +
+                "You see a short man covered in gold...\n" +
+                "He has gold pupils but read whites of his eyes.\n");
+            Console.WriteLine("He claps his hands and suddenly, he is holding two gold knives...\n ");
             Console.ReadKey();
             Combat(false, " Rumplestiltskin", 2, 3);
         }
@@ -49,8 +54,9 @@ namespace MyDungeonApp
         public static void WaffleMan()
         {
             Console.Clear();
-            Console.WriteLine(" You peer down the long dark hallway...\n" +
-                " It reeks of alcohol and syrup ");
+            Console.WriteLine("Your running down the long dark hallway...\n" +
+                "Suddenly you run into a room that is filled with flour and maple syrup.\n" +
+                " It reeks of alcohol and syrup...like an acholic waffle??");
             Console.WriteLine(" A large....WAFFLE MAN?! Appears before you.\n " +
                 "Maybe he had something to do with your syrup bath....");
             Console.ReadKey();
@@ -60,9 +66,11 @@ namespace MyDungeonApp
         public static void FairyGodmother()
         {
             Console.Clear();
-            Console.WriteLine(" You open a window to maybe jump out of this place...\n" +
-                " Suddenly, a sound of buzzing fills your ears ");
-            Console.WriteLine(" Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
+            Console.WriteLine("Your finding escaping to be difficult.\n" +
+                "You try to open a window to maybe jump out of this place...\n" +
+                "It doesn't pry open easily and you kick the window out!" +
+                "Suddenly, a sound of LOUD buzzing fills your ears");
+            Console.WriteLine("Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
                 " Are you going to take that from a bedazzled lady?! ");
             Console.ReadKey();
             Combat(false, " Fairy Godmother", 1, 4);
@@ -71,10 +79,13 @@ namespace MyDungeonApp
         public static void CaptainHook()
         {
             Console.Clear();
-            Console.WriteLine(" You turn a corner and feel like you might be getting out of this maze...\n" +
-                " A hearty laugh comes from behind you ");
-            Console.WriteLine(" Captain Hook stands behind you, creating a melody with his hook\n" +
-                " You can't lie, the tune is a BOP! Too bad it is about your impending doom...");
+            Console.WriteLine("You turn a corner and feel like you might be getting out of this maze...\n" +
+                "You find a door placed at an odd angle..." +
+                "You think it could be a reprieve. You see lots of treasure in here...." +
+                "To the left of the room is a crocodile giving you side eye??" +
+                "A hearty laugh comes from behind you");
+            Console.WriteLine("Captain Hook stands behind you, creating a melody with his hook\n" +
+                "You can't lie, the tune is a BOP! Too bad it is about your impending doom...");
             Console.ReadKey();
             Combat(false, " Captain Hook ", 2, 4);
         }
@@ -82,8 +93,10 @@ namespace MyDungeonApp
         public static void JackandJill()
         {
             Console.Clear();
-            Console.WriteLine(" You're catching your breathe when you suddenly smell something terribly to sweet ");
-            Console.WriteLine(" Two plump figures with terrible haircuts and out of season lederhosen stand before you\n" +
+            Console.WriteLine("You're able to fit yourself through a crack in the wall...\n" +
+                "It leads you to a room filled with candy covered in....BLOOD?!?\n" +
+                "It reeks of a sick sweet situation.\n");
+            Console.WriteLine("Two plump figures with terrible haircuts and out of season lederhosen stand before you\n" +
                 " You can't tell if they are couple or related...gross...");
             Console.ReadKey();
             Combat(false, " Jack and Jill ", 3, 4);
@@ -92,9 +105,11 @@ namespace MyDungeonApp
         public static void PuppetMaster()
         {
             Console.Clear();
-            Console.WriteLine(" Suddenly you are surrounded by tiny puppets hitting your knees ");
-            Console.WriteLine(" At first it's funny, maybe even charming...\n" +
-                "Then a puppet pulls out a fight and you know you what you must do!");
+            Console.WriteLine("You find a charming room that is quiet. There is a stage and rows of empty seats...\n" +
+                "The stage is small and you wonder if you have entered a puppet room...");
+            Console.WriteLine("Suddenly you are surrounded by tiny puppets hitting your knees");
+            Console.WriteLine("At first it's funny, maybe even charming...\n" +
+                "Then a puppet pulls out a knife and you know you what you must do!");
             Console.ReadKey();
             Combat(false, " Puppet Master ", 2, 4);
         }
@@ -102,11 +117,13 @@ namespace MyDungeonApp
         public static void Shrek()
         {
             Console.Clear();
-            Console.WriteLine(" You hear a loud stomping coming from down the hall ");
-            Console.WriteLine(" It rattles the stones beneath your feet...\n" +
-                " Shrek comes from behind the wall and is using a human bone to pluck his teeth!\n" +
-                " You think he is there to help but he starts licking his lips as he is looking at you.\n" +
-                "Says, 'he hopes you've kept the fork for him to use on you! ");
+            Console.WriteLine("You hear a loud stomping coming from down the hall ");
+            Console.WriteLine("It rattles the stones beneath your feet...\n" +
+                "You grab the doorhandle next to and hide yourself in what appears to be....Shrek's bedroom??\n" +
+                "Finally! Maybe an ally in this stinky place..." +
+                "Shrek opens the door and is using a human bone to pluck his teeth!\n" +
+                "You think he is there to help but he starts licking his lips as he is looking at you.\n" +
+                "Shrek says, 'he hopes you've kept the fork for him to use on you! ");
             Console.ReadKey();
             Combat(false, " Shrek ", 1, 4);
         }
