@@ -63,12 +63,14 @@ namespace MyDungeon
                 Console.WriteLine("Oh god, you can't even remember your name....");
             else
                 Console.WriteLine("How did you end up here? You only remember your name is " + currentPlayer.name);
+            Console.WriteLine("Press Enter to begin.");
             Console.ReadKey();//console read key will wait till the keys pressed to pass this point
             Console.Clear();
             Console.WriteLine("You try to get up and realize you're in a bath of maple syrup.\n" +
                 "You muster up all your strength, and pull yourself out of this sticky situation.\n" +
                 "You find a large wooden door in what appears to be a dungeon.\n" +
-                "You open the door to find your captor is Lord Farquaad?!?!");
+                "You open the door to find your captor is Lord Farquaad?!?!\n");
+           
 
         }//ENDSTART()
 

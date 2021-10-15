@@ -56,7 +56,7 @@ namespace DungeonLibrary
                 Console.WriteLine("Weapon Strength: " + p.weaponValue);
                 Console.WriteLine("Armor Strength: " + p.armorValue);
                 Console.WriteLine("Potions: " + p.potion);
-                Console.WriteLine("Weapon Strength: " + p.mods);
+                Console.WriteLine("Difficulty Mods: " + p.mods);
                 Console.WriteLine("-----------------------");
                 //Wait for input
                 string input = Console.ReadLine().ToLower();
