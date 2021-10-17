@@ -26,7 +26,7 @@ namespace MyDungeon
         }
 
         //initiate beginning (method)
-        static void Start()
+        public static void Start()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Title = " Dungeon of DOOM! ft. Shrek LOL: ";
