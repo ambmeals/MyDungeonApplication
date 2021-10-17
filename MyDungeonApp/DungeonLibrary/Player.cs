@@ -18,7 +18,7 @@ namespace MyDungeon
         public int armorValue = 0;
         public int potion = 5;
         public int weaponValue = 1;
-
+        //making mods buyable at store
         public int mods = 0;
 
 

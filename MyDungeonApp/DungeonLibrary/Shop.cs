@@ -98,13 +98,13 @@ namespace DungeonLibrary
                 else if (item == "dif")
                     p.mods++;
 
-                //coins is going to subtract purchasiung cost
+                //coins is going to subtract purchasing cost
                 p.coins -= cost;
 
             }
             else
             {
-                Console.WriteLine(" You broke bloke, you need more gold! ");
+                Console.WriteLine("You broke bloke, you need more gold! ");
                 Console.ReadKey();
             }
         }
