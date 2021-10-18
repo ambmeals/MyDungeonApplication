@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MyDungeon;
 
+
 namespace MyDungeon
 {
     public class Player
@@ -13,7 +14,9 @@ namespace MyDungeon
 
         public string name;
         public int id;
-        public int coins = 3000;
+        public int coins = 300;
+        public int level = 1;
+        public int xp = 0;
         public int health = 10;
         public int armorValue = 0;
         public int potion = 5;
@@ -49,5 +52,40 @@ namespace MyDungeon
             int lower = (10 * mods + 10);
             return rand.Next(lower, upper);
         }
+
+        public int GetXp()
+        {
+            int upper = (20 * mods + 50);
+            int lower = (15 * mods + 10);
+            return rand.Next(lower, upper);
+
+        }
+
+        public int GetLevelUpValue()
+        {
+            return 100 * level + 400;
+        }
+
+        public bool CanLevelUp()
+        {
+            if (xp >= GetLevelUpValue())
+                return true;
+            else
+                return false;
+        }
+
+        public void LevelUp()
+        {
+            while (CanLevelUp())
+            {
+                xp -= GetLevelUpValue();
+                level++;
+            }
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("Congrats! You are now level " + level + "!!!!");
+            Console.ResetColor();
+
+        }
+
     }
 }

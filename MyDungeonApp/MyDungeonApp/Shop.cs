@@ -30,34 +30,32 @@ namespace DungeonLibrary
                 weaponP = 75 * p.weaponValue;
                 difP = 200 + 100 * p.mods;
                 Console.Clear();
-                Console.WriteLine("----------SHOP--------");
+                Console.WriteLine("=====================HOP=====================");
                 Console.WriteLine(" [W]eapon:          $" + weaponP);
                 Console.WriteLine(" [A]rmor:           $" + armorP);
                 Console.WriteLine(" [P]otions:         $" + potionP);
                 Console.WriteLine(" [D]ifficulty Mod:  $" + difP);
-                Console.WriteLine("-----------------------");
+                Console.WriteLine("=====================");
                 Console.WriteLine(" [E]xit Shop");
                 Console.WriteLine("");
-                string title =
-
-          @" ----------------------------------------------------------
-        UUUUUUUUU| HHHHHHHHHH    |            |AAAAAAAA     |UUUU
-        UUUUUU C |HHHHHHHHHHHHH  | LLLL       |AAAAAAAAAAA  |UUUUU
-        UUUUU /\_________ HHHHHH |LLLLLLLLLL  |AAAAAAAAAAAAA|UUUUU
-        ==== /    |######| =======================================
-        QQQQ |\   |#####/  PPPPP |   UU       |   IIIIIIIL  |   TT
-        QQQ / |   |<_____ PPPPPP | UUUUUUUU   | IIIIIIILLLLL| TTTT
-        === ` `   o      o =======================================";
-                Console.WriteLine(title);
+                
+                
                 Console.WriteLine(p.name + "'s Stats");
-                Console.WriteLine("-----------------------");
+                Console.WriteLine("=====================");
                 Console.WriteLine("Current Health: " + p.health);
                 Console.WriteLine("Coins:           " + p.coins);
                 Console.WriteLine("Weapon Strength: " + p.weaponValue);
                 Console.WriteLine("Armor Strength: " + p.armorValue);
                 Console.WriteLine("Potions: " + p.potion);
                 Console.WriteLine("Difficulty Mods: " + p.mods);
-                Console.WriteLine("-----------------------");
+
+                Console.WriteLine("Xp:");
+                Console.Write("[");
+                Program.ProgressBar("+", " ",((decimal)p.xp/(decimal)p.GetLevelUpValue()),25);
+                Console.WriteLine("]");
+
+                Console.WriteLine("Level: ", p.level);
+                Console.WriteLine("=====================");
                 //Wait for input
                 string input = Console.ReadLine().ToLower();
                 if (input == "w" || input == "weapon")

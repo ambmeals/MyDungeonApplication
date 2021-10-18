@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace MyDungeonApp
 {
     public class Encounters
@@ -132,10 +133,10 @@ namespace MyDungeonApp
                 "You hear a shrill tiny voice come from below your gaze...\n" +
                 "You look down and a tiny shrill Ginger Breadman is running straight toward you.\n" +
                 "This no longer feels like Christmas and suddenly feels like your DOOM!\n" +
-                "Ginger Breadman pulls out the sharpest candy cane shiv EVER and approaches you...", 30);
+                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...", 30);
             Print("Press Enter to begin.", 30);
             Console.ReadKey();
-            Combat(false, " Rumplestiltskin", 2, 3);
+            Combat(false, " Ginger BreadMan", 2, 3);
         }
 
 
@@ -307,11 +308,18 @@ namespace MyDungeonApp
             }
 
             int c = Program.currentPlayer.GetCoins();
+            int x = Program.currentPlayer.GetXp();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("As you stand over your vanquished conquest," + n + ", there body dissovles\n" +
-                "You collect " + c + " GOLD COINS!");
+                "You collect " + c + " GOLD COINS!\n" +
+                "You have gained" +x+ " XP! Hooray!");
             //this should add coins to your amount
             Program.currentPlayer.coins += c;
+            Program.currentPlayer.xp += x;
+
+            if (Program.currentPlayer.CanLevelUp())
+                Program.currentPlayer.LevelUp();
+
             Console.ReadKey();
 
 
