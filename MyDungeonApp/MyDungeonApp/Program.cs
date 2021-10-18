@@ -24,7 +24,7 @@ namespace MyDungeon
                 Encounters.RandomEncounter();
             }
         }
-
+        
         //initiate beginning (method)
         public static void Start()
         {
@@ -55,6 +55,27 @@ namespace MyDungeon
             Print("Who are you?: ", 60);
             //waiting for user response
             currentPlayer.name = Console.ReadLine();
+            Print("Class: Shrek, Fiona, Donkey", 30);
+
+
+            bool flag = false;
+            while (flag == false)
+            {
+                flag = true;
+                string input = Console.ReadLine().ToLower();
+                if (input == "shrek")
+                    currentPlayer.currentClass = Player.PlayerClass.Shrek;
+                else if (input == "fiona")
+                    currentPlayer.currentClass = Player.PlayerClass.Fiona;
+                else if (input == "donkey")
+                    currentPlayer.currentClass = Player.PlayerClass.Donkey;
+                else
+                {
+                    Console.WriteLine("Please choose an existing class");
+                    flag = false;
+                }
+               
+            }
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Print("You awake in a weird cold dark empty room. You think it is a dungeon...", 30);

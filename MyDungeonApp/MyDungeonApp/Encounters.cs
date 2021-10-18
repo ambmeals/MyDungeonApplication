@@ -67,7 +67,7 @@ namespace MyDungeonApp
         public static void FairyGodmother()
         {
             Console.Clear();
-            Print("Your finding escaping to be difficult.\n" +
+            Print("You are finding escaping to be difficult.\n" +
                 "You try to open a window to maybe jump out of this place...\n" +
                 "It doesn't pry open easily and you kick the window out!" +
                 "Suddenly, a sound of LOUD buzzing fills your ears", 30);
@@ -122,21 +122,7 @@ namespace MyDungeonApp
             Combat(false, " Puppet Master ", 2, 4);
         }
 
-        public static void Shrek()
-        {
-            Console.Clear();
-            Print("You hear a loud stomping coming from down the hall ", 30);
-            Print("It rattles the stones beneath your feet...\n" +
-                "You grab the doorhandle next to you and hide yourself in what appears to be....Shrek's bedroom??\n" +
-                "Finally! Maybe an ally in this stinky place..." +
-                "Shrek opens the door and is using a human bone to pluck his teeth...\n" +
-                "You think he is there to help but he starts licking his lips as he is looking at you.\n" +
-                "Shrek says, 'he hopes you've kept the fork for him to use on you!", 30);
-            Console.WriteLine("");
-            Print("Press Enter to begin.", 30);
-            Console.ReadKey();
-            Combat(false, " Shrek ", 1, 4);
-        }
+
 
         public static void GingerBreadMan()
         {
@@ -157,7 +143,7 @@ namespace MyDungeonApp
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 9))
+            switch (rand.Next(0, 8))
             {
                 case 0:
                     BasicFightEncounter();
@@ -181,9 +167,6 @@ namespace MyDungeonApp
                     PuppetMaster();
                     break;
                 case 7:
-                    Shrek();
-                        break;
-                case 8:
                     GingerBreadMan();
                     break;
 
@@ -232,7 +215,7 @@ namespace MyDungeonApp
                     int damage = p - Program.currentPlayer.armorValue;
                     if (damage < 0)//need to make sure the damage does not go negative
                         damage = 0;
-                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4);
+                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1,4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Fiona)?2:0);//if they are Fiona, they get +2 of attack
                     Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage ");
                     //subtract from the value that the current player health already is
                     Program.currentPlayer.health -= damage;
@@ -256,8 +239,8 @@ namespace MyDungeonApp
                 }
                 else if (input.ToLower() == "r" || input.ToLower() == "run")
                 {
-                    //RUN
-                    if (rand.Next(0, 2) == 0)
+                    //RUN                                       //Donkey will be able to run away no matter what
+                    if (Program.currentPlayer.currentClass != Player.PlayerClass.Donkey && rand.Next(0, 2) == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("As you dash away from, " + n + " scratches your shoulder and strikes you.\n" + " You fly forward. ");
@@ -284,7 +267,7 @@ namespace MyDungeonApp
                     //HEAL
                     if (Program.currentPlayer.potion == 0)
                     {
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Blue;//case for empty
                         Console.WriteLine("Groppin' around desperately, you grasp for a potion.\n" +
                             "Unfortunately you only find used tissues. ");
                         int damage = p - Program.currentPlayer.armorValue;
@@ -298,7 +281,8 @@ namespace MyDungeonApp
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("You reach into your sack and pull out a neon green tube.\n " +
                             "You guzzle it down..... ");
-                        int potionV = 5;
+                        //Shrek has really good healing
+                        int potionV = 5 + ((Program.currentPlayer.currentClass==Player.PlayerClass.Shrek)?+4:0);
                         Console.WriteLine("You gain " + potionV + " health");
                         Console.WriteLine("You gain " + potionV + " health");
                         Program.currentPlayer.health += potionV;
