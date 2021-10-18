@@ -55,7 +55,7 @@ namespace MyDungeon
             Print("Who are you?: ", 60);
             //waiting for user response
             currentPlayer.name = Console.ReadLine();
-            Print("Class: Shrek, Fiona, Donkey", 30);
+            Print("Specialty: Fighter, Defender, Runner", 30);
 
 
             bool flag = false;
@@ -63,15 +63,15 @@ namespace MyDungeon
             {
                 flag = true;
                 string input = Console.ReadLine().ToLower();
-                if (input == "shrek")
-                    currentPlayer.currentClass = Player.PlayerClass.Shrek;
-                else if (input == "fiona")
-                    currentPlayer.currentClass = Player.PlayerClass.Fiona;
-                else if (input == "donkey")
-                    currentPlayer.currentClass = Player.PlayerClass.Donkey;
+                if (input == "fighter")
+                    currentPlayer.currentClass = Player.PlayerClass.Fighter;
+                else if (input == "defender")
+                    currentPlayer.currentClass = Player.PlayerClass.Defender;
+                else if (input == "runner")
+                    currentPlayer.currentClass = Player.PlayerClass.Runner;
                 else
                 {
-                    Console.WriteLine("Please choose an existing class");
+                    Console.WriteLine("Please choose a specialty");
                     flag = false;
                 }
                

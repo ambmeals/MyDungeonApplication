@@ -25,8 +25,8 @@ namespace MyDungeon
         //making mods buyable at store
         public int mods = 0;
 
-        public enum PlayerClass { Shrek, Fiona, Donkey};
-        public PlayerClass currentClass = PlayerClass.Shrek;
+        public enum PlayerClass { Fighter, Defender, Runner};
+        public PlayerClass currentClass = PlayerClass.Fighter;
 
 
         public int GetHealth()
