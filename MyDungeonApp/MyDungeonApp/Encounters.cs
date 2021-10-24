@@ -134,74 +134,20 @@ namespace MyDungeonApp
                 "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
-            if (IsChristmas())
+            if(IsChristmas())
                 Combat(false, "Santa", 3, 5);
-            else
-            Combat(false, " Ginger Bread Man", 1, 3);
+            Combat(false, " Ginger BreadMan", 1, 3);
         }
 
 
-        public static void PuzzleOneEncounter()
-        {
-            Console.Clear();
-            Console.WriteLine("You are walking down a hall. You see that the floor is covered in candy runes.");
-            List<char> chars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }.ToList();
-            List<int> positions = new List<int>();
-            char c = chars[rand.Next(0, 10)];
-            chars.Remove(c);
-            for (int y = 0; y < 4; y++)
-            {
-                int pos = rand.Next(0, 4);
-                for (int x = 0; x < 4; x++)
-                {
-                    if (x == pos)
-                        Console.Write(c);
-                    else
-                        Console.Write(chars[rand.Next(0, 8)]);
-                }
-                Console.Write("\n");
-            }
-            Console.WriteLine("Choose your path:  (Type the position of the candy runes you want to stand on not the number. LEFT TO RIGHT))");
-            for (int i = 0; i < 4; i++)
-            {
-                while (true)
-                {
-                    /*int input =*/
-                    if (int.TryParse(Console.ReadLine(), out int input) && input < 5 && input > 0)
-                    {
-                        if (positions[i] == input - 1)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Sharp candy canes fly out of the walls! You take 2 damage.");
-                            Program.currentPlayer.health -= 2;
-                            if (Program.currentPlayer.health <= 0)
-                            {
-                                //DEATH CODE
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("You start to feel sick. The poison from the candy canes slowly kills you...");
-                                Console.ReadKey();
-                                System.Environment.Exit(1);
-                            }
-                            break;
-                        }
-                    }
-                    else
-                   Console.WriteLine("Invalid Input: Whole numbers 1 -4 only");
-                    
-                }
-            }
-            Console.WriteLine("You have successfully crossed the hallway. Guess you're not a newb.");
-            Console.ReadKey();
-        }
+       
+            
 
 
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 9))
+            switch (rand.Next(0, 8))
             {
                 case 0:
                     BasicFightEncounter();
@@ -228,7 +174,6 @@ namespace MyDungeonApp
                     GingerBreadMan();
                     break;
                 case 8:
-                    PuzzleOneEncounter();
                     break;
 
             }
@@ -240,7 +185,6 @@ namespace MyDungeonApp
             string n = "";
             int p = 0;
             int h = 0;
-            
             if (random)
             {
                 n = GetName();
@@ -252,7 +196,6 @@ namespace MyDungeonApp
                 n = name;
                 p = power;
                 h = health;
-               
             }
             //while health is greater than 0
             while (h > 0)
