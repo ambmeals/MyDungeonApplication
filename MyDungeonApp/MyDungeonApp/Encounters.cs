@@ -3,8 +3,6 @@ using MyDungeon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 
@@ -20,9 +18,9 @@ namespace MyDungeonApp
         {
             Print("You can't believe how short all of the furniture is...\n" +
                 "You stumble over piles of books while trying to reach your captor.\n" +
-                "Luckily, while stumbling, you're able to grab a sharp fork.", 30);
-            Print("Lord Farquaad begins to turn around....", 30);
-            Print("Press Enter to begin.", 30);
+                "Luckily, while stumbling, you're able to grab a sharp fork.", 20);
+            Print("Lord Farquaad begins to turn around....", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, "Lord Farquaad", 1, 3);
         }
@@ -31,7 +29,7 @@ namespace MyDungeonApp
         {
             Console.Clear();
             Print("You turn the corner and there you see another figure in your way...\n" +
-                "These halls seem never ending like an illusion.", 30);
+                "These halls seem never ending like an illusion.", 20);
             Console.ReadKey();
             Combat(true, "", 0, 0);
         }
@@ -45,11 +43,11 @@ namespace MyDungeonApp
                 "You realize the threads on these spools are made of GOLD.\n" +
                 "The door suddenly bursts open with a gust of wind.\n" +
                 "You see a lean man covered in gold...\n" +
-                "He has gold pupils & the 'whites' of his eyes are red...", 30);
-            Print("He claps his hands and suddenly has a gold knife in each hand...\n ", 30);
-            Print("Press Enter to begin.", 30);
+                "He has gold pupils & the 'whites' of his eyes are red...", 20);
+            Print("He claps his hands and suddenly has a gold knife in each hand...\n ", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
-            Combat(false, " Rumplestiltskin", 2, 3);
+            Combat(false, " Rumplestiltskin", 2, 4);
         }
 
         public static void WaffleMan()
@@ -57,10 +55,10 @@ namespace MyDungeonApp
             Console.Clear();
             Print("You are running down the long never ending hallway...\n" +
                 "You vere ledft and suddenly you run into a room that is filled with flour and maple syrup.\n" +
-                "It reeks of alcohol and syrup...like an alcoholic waffle??", 30);
+                "It reeks of alcohol and syrup...like an alcoholic waffle??", 20);
             Print("A large...WAFFLE MAN?! Appears before you.\n " +
-                "Maybe he had something to do with your maple syrup bath...", 30);
-            Print("Press Enter to begin.", 30);
+                "Maybe he had something to do with your maple syrup bath...", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Waffle Man", 1, 3);
         }
@@ -71,10 +69,10 @@ namespace MyDungeonApp
             Print("You are finding escaping to be difficult.\n" +
                 "You try to open a window to maybe jump out of this place...\n" +
                 "It doesn't pry open easily and you kick the window out!" +
-                "Suddenly, a sound of LOUD buzzing fills your ears", 30);
+                "Suddenly, a sound of LOUD buzzing fills your ears", 20);
             Print("Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
-                " Are you going to take that from a bedazzled lady?! ", 30);
-            Print("Press Enter to begin.", 30);
+                " Are you going to take that from a bedazzled lady?! ", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Fairy Godmother", 1, 4);
         }
@@ -86,13 +84,13 @@ namespace MyDungeonApp
                 "You find a door placed at an odd angle..." +
                 "You think it could be a reprieve. You see lots of treasure in here...." +
                 "To the left of the room is a crocodile giving you side eye??" +
-                "A hearty laugh comes from behind you", 30);
+                "A hearty laugh comes from behind you", 20);
             Print("Captain Hook stands behind you, creating a melody with his hook\n" +
-                "You can't lie, the tune is a BOP! Too bad it is about your impending doom...", 30);
+                "You can't lie, the tune is a BOP! Too bad it is about your impending doom...", 20);
             Console.WriteLine("");
-            Print("Press Enter to begin.", 30);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
-            Combat(false, " Captain Hook ", 2, 4);
+            Combat(false, " Captain Hook ", 1, 2);
         }
 
         public static void JackandJill()
@@ -100,11 +98,11 @@ namespace MyDungeonApp
             Console.Clear();
             Print("You're able to fit yourself through a crack in the wall...\n" +
                 "It leads you to a room filled with candy covered in blood?!\n" +
-                "It reeks of a sweet sick situation.\n", 30);
+                "It reeks of a sweet sick situation.\n", 20);
             Print("Two plump figures with terrible haircuts and out of season lederhosen appear before you\n" +
-                "You can't tell if they are married or related...", 30);
+                "You can't tell if they are married or related...", 20);
             Console.WriteLine();
-            Print("Press Enter to begin.", 30);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Jack and Jill ", 3, 4);
         }
@@ -113,12 +111,12 @@ namespace MyDungeonApp
         {
             Console.Clear();
             Print("You find a charming room that is quiet. There is a stage and rows of empty seats...\n" +
-                "The stage is small and you wonder if you have entered a puppet room...", 30);
-            Print("Suddenly you are surrounded by tiny puppets hitting your knees", 30);
+                "The stage is small and you wonder if you have entered a puppet room...", 20);
+            Print("Suddenly you are surrounded by tiny puppets hitting your knees", 20);
             Print("At first it's funny, maybe even charming...\n" +
-                "Then a puppet pulls out a knife and you know you what you must do!", 30);
+                "Then a puppet pulls out a knife and you know you what you must do!", 20);
             Console.WriteLine("");
-            Print("Press Enter to begin.", 30);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Puppet Master ", 2, 4);
         }
@@ -133,18 +131,77 @@ namespace MyDungeonApp
                 "You hear a shrill tiny voice come from below your gaze...\n" +
                 "You look down and a tiny shrill Ginger Breadman is running straight toward you.\n" +
                 "This no longer feels like Christmas and suddenly feels like your DOOM!\n" +
-                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...", 30);
-            Print("Press Enter to begin.", 30);
+                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
-            Combat(false, " Ginger BreadMan", 2, 3);
+            if (IsChristmas())
+                Combat(false, "Santa", 3, 5);
+            else
+            Combat(false, " Ginger Bread Man", 1, 3);
         }
 
+
+        public static void PuzzleOneEncounter()
+        {
+            Console.Clear();
+            Console.WriteLine("You are walking down a hall. You see that the floor is covered in candy runes.");
+            List<char> chars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }.ToList();
+            List<int> positions = new List<int>();
+            char c = chars[rand.Next(0, 10)];
+            chars.Remove(c);
+            for (int y = 0; y < 4; y++)
+            {
+                int pos = rand.Next(0, 4);
+                for (int x = 0; x < 4; x++)
+                {
+                    if (x == pos)
+                        Console.Write(c);
+                    else
+                        Console.Write(chars[rand.Next(0, 8)]);
+                }
+                Console.Write("\n");
+            }
+            Console.WriteLine("Choose your path:  (Type the position of the candy runes you want to stand on not the number. LEFT TO RIGHT))");
+            for (int i = 0; i < 4; i++)
+            {
+                while (true)
+                {
+                    /*int input =*/
+                    if (int.TryParse(Console.ReadLine(), out int input) && input < 5 && input > 0)
+                    {
+                        if (positions[i] == input - 1)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Sharp candy canes fly out of the walls! You take 2 damage.");
+                            Program.currentPlayer.health -= 2;
+                            if (Program.currentPlayer.health <= 0)
+                            {
+                                //DEATH CODE
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("You start to feel sick. The poison from the candy canes slowly kills you...");
+                                Console.ReadKey();
+                                System.Environment.Exit(1);
+                            }
+                            break;
+                        }
+                    }
+                    else
+                   Console.WriteLine("Invalid Input: Whole numbers 1 -4 only");
+                    
+                }
+            }
+            Console.WriteLine("You have successfully crossed the hallway. Guess you're not a newb.");
+            Console.ReadKey();
+        }
 
 
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 8))
+            switch (rand.Next(0, 9))
             {
                 case 0:
                     BasicFightEncounter();
@@ -170,6 +227,9 @@ namespace MyDungeonApp
                 case 7:
                     GingerBreadMan();
                     break;
+                case 8:
+                    PuzzleOneEncounter();
+                    break;
 
             }
         }
@@ -180,6 +240,7 @@ namespace MyDungeonApp
             string n = "";
             int p = 0;
             int h = 0;
+            
             if (random)
             {
                 n = GetName();
@@ -191,6 +252,7 @@ namespace MyDungeonApp
                 n = name;
                 p = power;
                 h = health;
+               
             }
             //while health is greater than 0
             while (h > 0)
@@ -216,7 +278,7 @@ namespace MyDungeonApp
                     int damage = p - Program.currentPlayer.armorValue;
                     if (damage < 0)//need to make sure the damage does not go negative
                         damage = 0;
-                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1,4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Fiona)?2:0);//if they are Fiona, they get +2 of attack
+                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Defender) ? 2 : 0);//if they are Fiona, they get +2 of attack
                     Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage ");
                     //subtract from the value that the current player health already is
                     Program.currentPlayer.health -= damage;
@@ -241,15 +303,16 @@ namespace MyDungeonApp
                 else if (input.ToLower() == "r" || input.ToLower() == "run")
                 {
                     //RUN                                       //Donkey will be able to run away no matter what
-                    if (Program.currentPlayer.currentClass != Player.PlayerClass.Donkey && rand.Next(0, 2) == 0)
+                    if (Program.currentPlayer.currentClass != Player.PlayerClass.Runner && rand.Next(0, 2) == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("As you dash away from, " + n + " scratches your shoulder and strikes you.\n" + " You fly forward. ");
-
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         int damage = p - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
                         Console.WriteLine("You lose " + damage + " health and are unable to escape.");
+                        Program.currentPlayer.health -= damage;
                     }
                     else
                     {
@@ -282,29 +345,22 @@ namespace MyDungeonApp
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("You reach into your sack and pull out a neon green tube.\n " +
                             "You guzzle it down..... ");
-                        //Shrek has really good healing
-                        int potionV = 5 + ((Program.currentPlayer.currentClass==Player.PlayerClass.Shrek)?+4:0);
+                        //fighter mod code
+                        int potionV = 5 + ((Program.currentPlayer.currentClass == Player.PlayerClass.Fighter) ? +4 : 0);
                         Console.WriteLine("You gain " + potionV + " health");
                         Console.WriteLine("You gain " + potionV + " health");
                         Program.currentPlayer.health += potionV;
+                        Program.currentPlayer.potion--;
                         Console.WriteLine("As you were distracted, " + n + " charged forward and struck you! ");
                         int damage = (p / 2) - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
                         Console.WriteLine(" You lose " + damage + " health. ");
                     }
-                    Console.ReadKey();
-                }
-                if (Program.currentPlayer.health <= 0)
-                {
-                    //DEATH CODE
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("As " + n + " stands proudly over you, without breaking a sweat they strike you dead.\n " +
-                        "" + n + "Easily killed you");
-                    Console.ReadKey();
-                    System.Environment.Exit(1);
+
                 }
                 Console.ReadKey();
+
             }
 
             int c = Program.currentPlayer.GetCoins();
@@ -312,8 +368,8 @@ namespace MyDungeonApp
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("As you stand over your vanquished conquest," + n + ", there body dissovles\n" +
                 "You collect " + c + " GOLD COINS!\n" +
-                "You have gained" +x+ " XP! Hooray!");
-            //this should add coins to your amount
+                "You have gained" + x + " XP! Hooray!");
+
             Program.currentPlayer.coins += c;
             Program.currentPlayer.xp += x;
 
@@ -328,6 +384,23 @@ namespace MyDungeonApp
         //RANDOM ENCOUNTERS
         public static string GetName()
         {
+            
+             if(IsChristmas())
+            {
+                switch (rand.Next(0, 4))
+                {
+                    case 0:
+                        return "Deranged Elf";
+                    case 1:
+                        return "Vicious Santa";
+                    case 2:
+                        return "Frost Snowgolem";
+                    case 3:
+                        return "Enraged Reindeer";
+
+                }
+            }
+
             switch (rand.Next(0, 10))
             {
                 case 0:
@@ -356,7 +429,14 @@ namespace MyDungeonApp
             return "Prince Charming";
         }
 
-             //arguments go within the parens
+        public static bool IsChristmas()
+        {
+            DateTime time = DateTime.Now;//Christmas event time
+            if (time.Month == 12 && time.Day >= 20)
+                return true;
+            return false;
+        }
+        //arguments go within the parens
         public static void Print(string text, int speed)
         {
             foreach (char c in text)
@@ -364,10 +444,9 @@ namespace MyDungeonApp
                 Console.Write(c);
                 System.Threading.Thread.Sleep(speed);
             }
-            Console.WriteLine();
+            
 
-
-	    }
+        }
 
     } //END CLASS
 }//END NAMESPACE

@@ -30,7 +30,7 @@ namespace DungeonLibrary
                 weaponP = 75 * p.weaponValue;
                 difP = 200 + 100 * p.mods;
                 Console.Clear();
-                Console.WriteLine("=====================HOP=====================");
+                Console.WriteLine("========SHOP=========");
                 Console.WriteLine(" [W]eapon:          $" + weaponP);
                 Console.WriteLine(" [A]rmor:           $" + armorP);
                 Console.WriteLine(" [P]otions:         $" + potionP);
@@ -48,14 +48,12 @@ namespace DungeonLibrary
                 Console.WriteLine("Armor Strength: " + p.armorValue);
                 Console.WriteLine("Potions: " + p.potion);
                 Console.WriteLine("Difficulty Mods: " + p.mods);
-
-                Console.WriteLine("Xp:");
-                Console.Write("[");
-                Program.ProgressBar("+", " ",((decimal)p.xp/(decimal)p.GetLevelUpValue()),25);
-                Console.WriteLine("]");
-
-                Console.WriteLine("Level: ", p.level);
-                Console.WriteLine("=====================");
+                
+                Console.WriteLine("XP:");
+                
+                Program.ProgressBar("+", " ", ((decimal)p.xp / (decimal)p.GetLevelUpValue()),25);
+                
+                //Program.ProgressBar("+", " ",((decimal)p.xp/(decimal)p.GetLevelUpValue()),25);
                 //Wait for input
                 string input = Console.ReadLine().ToLower();
                 if (input == "w" || input == "weapon")

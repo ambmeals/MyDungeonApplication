@@ -12,7 +12,7 @@ namespace MyDungeon
 
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
-
+        
         static void Main(string[] args)
         {
             
@@ -52,11 +52,12 @@ namespace MyDungeon
 
 
             Console.WriteLine(title);
-            Print("Who are you?: ", 60);
+            Print("Who are you?: ", 30);
             //waiting for user response
             currentPlayer.name = Console.ReadLine();
-            Print("Specialty: Fighter, Defender, Runner", 30);
-
+            Print("Specialty: Fighter, Defender, Runner", 20);
+            Weapon sword = new Weapon(8, "Silver Sword", 10, false, 1);
+            
 
             bool flag = false;
             while (flag == false)
@@ -78,19 +79,21 @@ namespace MyDungeon
             }
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Print("You awake in a weird cold dark empty room. You think it is a dungeon...", 30);
-            Print("Feeling dazed, confused, and absolutely drained you can't remember a thing...", 30);
+            Print("You awake in a weird cold dark empty room. You think it is a dungeon...", 20);
+            Print("Feeling dazed, confused, and absolutely drained you can't remember a thing...", 20);
             if (currentPlayer.name == "")
-                Print("Oh god, you can't even remember your name....", 60);
+                Print("Oh lord, your memory is terrible...\n" +
+                    "You can't even remember your name....", 30);
             else
-                Print("How did you end up here? You only remember your name is " + currentPlayer.name, 30);
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Print("How did you end up here? You only remember your name is " + currentPlayer.name, 20);
             Console.WriteLine("Press Enter to begin.");
             Console.ReadKey();//console read key will wait till the keys pressed to pass this point
             Console.Clear();
             Print("You try to get up and realize you're in a bath of maple syrup.\n" +
                 "You muster up all your strength, and pull yourself out of this sticky situation.\n" +
                 "You find a large wooden door in what appears to be a dungeon.\n" +
-                "You open the door to find your captor is Lord Farquaad?!?!\n", 30);
+                "You open the door to find your captor is Lord Farquaad?!?!\n", 20);
            
 
         }//ENDSTART()
@@ -114,7 +117,7 @@ namespace MyDungeon
             for (int i = 0; i < size; i++)
             {
                 if (i < dif)
-                Console.Write(fillerChar);
+                    Console.Write(fillerChar);
                 else
                     Console.WriteLine(backgroundChar);
             }

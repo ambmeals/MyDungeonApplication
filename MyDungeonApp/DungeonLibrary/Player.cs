@@ -15,7 +15,7 @@ namespace MyDungeon
         public string name;
         public int id;
         public int coins = 300;
-        public int level = 1;
+        public int level = 1; 
         public int xp = 0;
         public int health = 10;
         public int armorValue = 0;
@@ -54,7 +54,7 @@ namespace MyDungeon
         }
 
         public int GetXp()
-        {
+        {   //getting the player xp 
             int upper = (20 * mods + 50);
             int lower = (15 * mods + 10);
             return rand.Next(lower, upper);
@@ -81,6 +81,7 @@ namespace MyDungeon
                 xp -= GetLevelUpValue();
                 level++;
             }
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Congrats! You are now level " + level + "!!!!");
             Console.ResetColor();
