@@ -18,18 +18,19 @@ namespace MyDungeonApp
         {
             Print("You can't believe how short all of the furniture is...\n" +
                 "You stumble over piles of books while trying to reach your captor.\n" +
-                "Luckily, while stumbling, you're able to grab a sharp fork.", 20);
+                "Luckily, while stumbling, you're able to grab a sharp fork.\n", 20);
             Print("Lord Farquaad begins to turn around....", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, "Lord Farquaad", 1, 3);
+            
         }
 
         public static void BasicFightEncounter()
         {
             Console.Clear();
             Print("You turn the corner and there you see another figure in your way...\n" +
-                "These halls seem never ending like an illusion.", 20);
+                "These halls seem like a never ending illusion.", 20);
             Console.ReadKey();
             Combat(true, "", 0, 0);
         }
@@ -39,11 +40,9 @@ namespace MyDungeonApp
         {
             Console.Clear();
             Print("You've found some solitude and safety in a room with wool threading spools.\n" +
-                "The spools all appear to be 'glittery'.\n" +
                 "You realize the threads on these spools are made of GOLD.\n" +
                 "The door suddenly bursts open with a gust of wind.\n" +
-                "You see a lean man covered in gold...\n" +
-                "He has gold pupils & the 'whites' of his eyes are red...", 20);
+                "You see a lean man covered in gold...\n", 20);
             Print("He claps his hands and suddenly has a gold knife in each hand...\n ", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
@@ -54,10 +53,10 @@ namespace MyDungeonApp
         {
             Console.Clear();
             Print("You are running down the long never ending hallway...\n" +
-                "You vere ledft and suddenly you run into a room that is filled with flour and maple syrup.\n" +
+                "You vere left and suddenly you run into a room that is filled with flour and maple syrup.\n" +
                 "It reeks of alcohol and syrup...like an alcoholic waffle??", 20);
             Print("A large...WAFFLE MAN?! Appears before you.\n " +
-                "Maybe he had something to do with your maple syrup bath...", 20);
+                "Maybe he had something to do with your maple syrup bath...\n", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Waffle Man", 1, 3);
@@ -71,7 +70,7 @@ namespace MyDungeonApp
                 "It doesn't pry open easily and you kick the window out!" +
                 "Suddenly, a sound of LOUD buzzing fills your ears", 20);
             Print("Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
-                " Are you going to take that from a bedazzled lady?! ", 20);
+                " Are you going to take that from a bedazzled lady?! \n", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, " Fairy Godmother", 1, 4);
@@ -81,12 +80,12 @@ namespace MyDungeonApp
         {
             Console.Clear();
             Print("You turn a corner and feel like you might be getting out of this maze...\n" +
-                "You find a door placed at an odd angle..." +
-                "You think it could be a reprieve. You see lots of treasure in here...." +
-                "To the left of the room is a crocodile giving you side eye??" +
-                "A hearty laugh comes from behind you", 20);
+                "You find a door placed at an odd angle...\n" +
+                "You think it could be a reprieve. You see lots of treasure in here....\n" +
+                "To the left of the room is a crocodile giving you side eye??\n" +
+                "A hearty laugh comes from behind you\n", 20);
             Print("Captain Hook stands behind you, creating a melody with his hook\n" +
-                "You can't lie, the tune is a BOP! Too bad it is about your impending doom...", 20);
+                "You can't lie, the tune is a BOP! Too bad it is about your impending doom...\n", 20);
             Console.WriteLine("");
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
@@ -100,7 +99,7 @@ namespace MyDungeonApp
                 "It leads you to a room filled with candy covered in blood?!\n" +
                 "It reeks of a sweet sick situation.\n", 20);
             Print("Two plump figures with terrible haircuts and out of season lederhosen appear before you\n" +
-                "You can't tell if they are married or related...", 20);
+                "You can't tell if they are married or related...\n", 20);
             Console.WriteLine();
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
@@ -114,7 +113,7 @@ namespace MyDungeonApp
                 "The stage is small and you wonder if you have entered a puppet room...", 20);
             Print("Suddenly you are surrounded by tiny puppets hitting your knees", 20);
             Print("At first it's funny, maybe even charming...\n" +
-                "Then a puppet pulls out a knife and you know you what you must do!", 20);
+                "Then a puppet pulls out a knife and you know you what you must do!\n", 20);
             Console.WriteLine("");
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
@@ -131,7 +130,7 @@ namespace MyDungeonApp
                 "You hear a shrill tiny voice come from below your gaze...\n" +
                 "You look down and a tiny shrill Ginger Breadman is running straight toward you.\n" +
                 "This no longer feels like Christmas and suddenly feels like your DOOM!\n" +
-                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...", 20);
+                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...\n", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
             if(IsChristmas())
@@ -311,14 +310,14 @@ namespace MyDungeonApp
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("As you stand over your vanquished conquest," + n + ", there body dissovles\n" +
                 "You collect " + c + " GOLD COINS!\n" +
-                "You have gained" + x + " XP! Hooray!");
+                "You have gained " + x + " XP! Hooray!");
 
             Program.currentPlayer.coins += c;
             Program.currentPlayer.xp += x;
 
             if (Program.currentPlayer.CanLevelUp())
                 Program.currentPlayer.LevelUp();
-
+            Console.Clear();
             Console.ReadKey();
 
 

@@ -49,7 +49,7 @@ namespace DungeonLibrary
                 Console.WriteLine("Potions: " + p.potion);
                 Console.WriteLine("Difficulty Mods: " + p.mods);
                 
-                Console.WriteLine("XP:");
+                Console.WriteLine("XP: ");
                 
                 Program.ProgressBar("+", " ", ((decimal)p.xp / (decimal)p.GetLevelUpValue()),25);
                 

@@ -8,6 +8,7 @@ namespace MyDungeonApp
 {
     public class Weapon
     {
+        static Random rand = new Random();
 
         //field
         private int _minDamage;

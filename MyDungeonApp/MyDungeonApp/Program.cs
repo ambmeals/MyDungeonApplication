@@ -9,7 +9,7 @@ namespace MyDungeon
   
     public class Program
     {
-
+        //intiating player new player instance
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
         
@@ -59,6 +59,7 @@ namespace MyDungeon
             Weapon sword = new Weapon(8, "Silver Sword", 10, false, 1);
             
 
+            //initiating user class selection in a while loop
             bool flag = false;
             while (flag == false)
             {
@@ -77,6 +78,7 @@ namespace MyDungeon
                 }
                
             }
+            //begin first encounter
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Print("You awake in a weird cold dark empty room. You think it is a dungeon...", 20);
@@ -85,8 +87,7 @@ namespace MyDungeon
                 Print("Oh lord, your memory is terrible...\n" +
                     "You can't even remember your name....", 30);
             else
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Print("How did you end up here? You only remember your name is " + currentPlayer.name, 20);
+             Print("How did you end up here? You only remember your name is " + currentPlayer.name, 20);
             Console.WriteLine("Press Enter to begin.");
             Console.ReadKey();//console read key will wait till the keys pressed to pass this point
             Console.Clear();
@@ -112,7 +113,7 @@ namespace MyDungeon
 
 
         public static void ProgressBar(string fillerChar, string backgroundChar, decimal value, int size)
-        {
+        {   //creating XP ProgressBar
             int dif = (int)(value * size);
             for (int i = 0; i < size; i++)
             {

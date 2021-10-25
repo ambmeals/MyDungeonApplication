@@ -17,7 +17,7 @@ namespace MyDungeon
         public int coins = 300;
         public int level = 1; 
         public int xp = 0;
-        public int health = 10;
+        public int health = 50;
         public int armorValue = 0;
         public int potion = 5;
         public int weaponValue = 1;
@@ -83,7 +83,7 @@ namespace MyDungeon
             }
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Congrats! You are now level " + level + "!!!!");
+            Console.WriteLine("Congrats! You are now level " + level + " !!!!");
             Console.ResetColor();
 
         }
