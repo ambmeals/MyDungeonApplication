@@ -16,23 +16,23 @@ namespace MyDungeonApp
         //void will not return a variable
         public static void FirstEncounter()
         {
-            Print("You can't believe how short all of the furniture is...\n" +
-                "You stumble over piles of books while trying to reach your captor.\n" +
-                "Luckily, while stumbling, you're able to grab a sharp fork.\n", 20);
-            Print("Lord Farquaad begins to turn around....", 20);
+            Print("You begin to charge at your captor.\n" +
+                "Luckily, you're able to grab a candied sword.\n", 20);
+            Print("Lord Farquaad begins to turn around....\n", 20);
             Print("Press Enter to begin.", 20);
             Console.ReadKey();
             Combat(false, "Lord Farquaad", 1, 3);
-            
+
         }
 
         public static void BasicFightEncounter()
         {
             Console.Clear();
             Print("You turn the corner and there you see another figure in your way...\n" +
-                "These halls seem like a never ending illusion.", 20);
+                "These halls seem like a never ending illusion.\n", 20);
+            Print("Press Enter to begin.", 20);
             Console.ReadKey();
-            Combat(true, "", 0, 0);
+            Combat(true, "", 0, 1);
         }
 
         //EXTRA ENOUNTERS // NOT RANDOM
@@ -54,10 +54,17 @@ namespace MyDungeonApp
             Console.Clear();
             Print("You are running down the long never ending hallway...\n" +
                 "You vere left and suddenly you run into a room that is filled with flour and maple syrup.\n" +
-                "It reeks of alcohol and syrup...like an alcoholic waffle??", 20);
+                "It reeks of alcohol and syrup...like an alcoholic waffle??\n", 20);
             Print("A large...WAFFLE MAN?! Appears before you.\n " +
                 "Maybe he had something to do with your maple syrup bath...\n", 20);
             Print("Press Enter to begin.", 20);
+            string title = @"    __  __             
+ \ \        / /   / _|/ _| |    |  \/  |            
+  \ \  /\  / /_ _| |_| |_| | ___| \  / | __ _ _ __  
+   \ \/  \/ / _` |  _|  _| |/ _ \ |\/| |/ _` | '_ \ 
+    \  /\  / (_| | | | | | |  __/ |  | | (_| | | | |
+     \/  \/ \__,_|_| |_| |_|\___|_|  |_|\__,_|_| |_|";
+            Console.WriteLine(title);
             Console.ReadKey();
             Combat(false, " Waffle Man", 1, 3);
         }
@@ -67,11 +74,21 @@ namespace MyDungeonApp
             Console.Clear();
             Print("You are finding escaping to be difficult.\n" +
                 "You try to open a window to maybe jump out of this place...\n" +
-                "It doesn't pry open easily and you kick the window out!" +
-                "Suddenly, a sound of LOUD buzzing fills your ears", 20);
-            Print("Fairy Godmother appears right in your face and smacks your nose with her wand!\n " +
-                " Are you going to take that from a bedazzled lady?! \n", 20);
-            Print("Press Enter to begin.", 20);
+                "It doesn't pry open easily and you kick the window out!\n" +
+                "Suddenly, a sound of LOUD buzzing fills your ears\n", 20);
+            Print("Fairy Godmother appears right in your face and smacks your nose with her wand!\n" +
+                "Are you going to take that from a bedazzled lady?! \n", 20);
+            Print("Press Enter to begin.\n", 20);
+            string title = @"                .--.   _,
+          .--;    \ /(_
+         /    '.   |   '-._    . ' .
+        |       \  \    ,-.)  -= * =-
+         \ /\_   '. \((` .(    '/. '
+          )\ /     \ )\  _/   _/
+         /  \\    .-'   '--. /_\
+        |    \\_.' ,        \/||
+";
+            Console.WriteLine(title);
             Console.ReadKey();
             Combat(false, " Fairy Godmother", 1, 4);
         }
@@ -88,6 +105,7 @@ namespace MyDungeonApp
                 "You can't lie, the tune is a BOP! Too bad it is about your impending doom...\n", 20);
             Console.WriteLine("");
             Print("Press Enter to begin.", 20);
+
             Console.ReadKey();
             Combat(false, " Captain Hook ", 1, 2);
         }
@@ -102,22 +120,68 @@ namespace MyDungeonApp
                 "You can't tell if they are married or related...\n", 20);
             Console.WriteLine();
             Print("Press Enter to begin.", 20);
+            string title = @"
+
+       o   oo                     
+     o         o   o                
+        ___o o   o                  
+       /`._;o       o               
+      |   /   o                     
+      ;_  |                        
+        `-'  
+          
+                ____
+              .' /  '.
+             / (  .- '\
+            | '.__\/__  |
+            |    /\  '.|
+             \.-'  )  /
+              '.__/_.'
+                    ____
+                  .' /:::.
+                 / (:::-'\
+                |:\__\/ __ |
+
+                |::::/\:::\|
+                 \::'  )::/
+                  '.__/::";
+            Console.WriteLine(title);
             Console.ReadKey();
-            Combat(false, " Jack and Jill ", 3, 4);
+            Combat(false, " Jack and Jill ", 2, 4);
         }
 
         public static void PuppetMaster()
         {
             Console.Clear();
-            Print("You find a charming room that is quiet. There is a stage and rows of empty seats...\n" +
-                "The stage is small and you wonder if you have entered a puppet room...", 20);
-            Print("Suddenly you are surrounded by tiny puppets hitting your knees", 20);
+            Print("You find a charming room that is quiet. There is a stage and rows of empty seats...\n"
+               , 20);
+            Print("Suddenly you are surrounded by tiny puppets hitting your knees\n", 20);
             Print("At first it's funny, maybe even charming...\n" +
                 "Then a puppet pulls out a knife and you know you what you must do!\n", 20);
             Console.WriteLine("");
+
             Print("Press Enter to begin.", 20);
+            string title = @"     __     __
+           (( \---/ ))
+            )__   __(
+           / ()___() \
+           \  /(_)\  /
+            \ \_|_/ /
+      _______>     <_______
+     //\      |>o<|      /\\
+     \\/___           ___\//
+           |         |
+           |         |
+           |         |
+           |         |
+           `--....---'
+             \     \
+              \     `.    
+               \      `.
+";
+            Console.WriteLine(title);
             Console.ReadKey();
-            Combat(false, " Puppet Master ", 2, 4);
+            Combat(false, " Puppet Master ", 1, 4);
         }
 
 
@@ -127,20 +191,26 @@ namespace MyDungeonApp
             Console.Clear();
             Print("Wow, the room you have stumbled upon smells like Christmas!\n" +
                 "You can't help but notice most of the furniture is made of candy canes and gum dropes...\n" +
-                "You hear a shrill tiny voice come from below your gaze...\n" +
-                "You look down and a tiny shrill Ginger Breadman is running straight toward you.\n" +
-                "This no longer feels like Christmas and suddenly feels like your DOOM!\n" +
-                "Ginger Breadman pulls out the sharpest candy cane shiv you've EVER and approaches you...\n", 20);
+                "You look down and a Ginger Breadman is running straight at you.\n" +
+                "This no longer feels like Christmas and suddenly feels like your DOOM!\n"
+                , 20);
             Print("Press Enter to begin.", 20);
+            string title = @"      ,-.
+                                   _(*_*)_      
+                                  (_  o  _)
+                                    / o \
+                                   (_/ \_)      
+";
+            Console.WriteLine(title);
             Console.ReadKey();
-            if(IsChristmas())
+            if (IsChristmas())
                 Combat(false, "Santa", 3, 5);
             Combat(false, " Ginger BreadMan", 1, 3);
         }
 
 
-       
-            
+
+
 
 
         //Encounter Tools
@@ -205,7 +275,7 @@ namespace MyDungeonApp
                 Console.WriteLine(p + "/" + h);
                 Console.WriteLine("---------------------");
                 Console.WriteLine("| [A]ttack [D]efend |");
-                Console.WriteLine("| [R]un    [H]eal   |      ");
+                Console.WriteLine("| [R]un    [H]eal   |              [E]xit                                 ");
                 Console.WriteLine("---------------------");
                 Console.WriteLine("   Potions:  " + Program.currentPlayer.potion + " Health: " + Program.currentPlayer.health);
                 string input = Console.ReadLine();
@@ -213,15 +283,18 @@ namespace MyDungeonApp
                 {
                     //ATTACK
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("With quick and impeccable reflexes, you stick your weapon right into your enemy!\n" +
-                        "The " + n + " gives you a sock on the back");
+                    Print("With quick and impeccable reflexes, you stick your weapon right into your enemy!\n" +
+                        "The " + n + " gives you a sock on the back\n", 20);
+
+
                     //power of the enemy minus your current player armor
                     //higher armor value will not damage as easily
                     int damage = p - Program.currentPlayer.armorValue;
                     if (damage < 0)//need to make sure the damage does not go negative
                         damage = 0;
-                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Defender) ? 2 : 0);//if they are Fiona, they get +2 of attack
-                    Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage ");
+                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Defender) ? 2 : 0);//if they are Attacker, they get +2 of attack
+                    Print("You lose " + damage + " health and deal " + attack + " damage \n", 20);
+                    Print("Press Enter to continue", 20);
                     //subtract from the value that the current player health already is
                     Program.currentPlayer.health -= damage;
                     h -= attack;
@@ -231,13 +304,15 @@ namespace MyDungeonApp
                     //DEFEND
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("As " + n + " prepares to smack it down on you,\n" +
-                        "you ready your sharp fork for defense... ");
+                        "you ready your sharp fork for defense... \n");
+
                     //the power of the opponent will be divided by 4
                     int damage = (p / 4) - Program.currentPlayer.armorValue;
                     if (damage < 0)//need to make sure the damage does not go negative
                         damage = 0;
                     int attack = rand.Next(0, Program.currentPlayer.weaponValue) / 2;
-                    Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage");
+                    Print("You lose " + damage + " health and deal " + attack + " damage\n", 20);
+
                     //subtract from the value that the current player health already is
                     Program.currentPlayer.health -= damage;
                     h -= attack;
@@ -248,25 +323,33 @@ namespace MyDungeonApp
                     if (Program.currentPlayer.currentClass != Player.PlayerClass.Runner && rand.Next(0, 2) == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("As you dash away from, " + n + " scratches your shoulder and strikes you.\n" + " You fly forward. ");
+                        Print("As you dash away from, " + n + " scratches your shoulder and strikes you.\n" + " You fly forward. \n", 20);
+
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         int damage = p - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
-                        Console.WriteLine("You lose " + damage + " health and are unable to escape.");
+                        Console.WriteLine("You lose " + damage + " health and are unable to escape.\n");
+                        Print("Press Enter to continue", 20);
                         Program.currentPlayer.health -= damage;
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("You use your ninja like reflexes to evade " + n + " and you sucessfully get away!");
-                        Console.ReadKey();
+                        Console.WriteLine("You use your ninja like reflexes to evade " + n + " and you sucessfully get away!\n");
+                        Print("Press Enter to continue", 20);
 
                         //go to store
                         Shop.LoadShop(Program.currentPlayer);
 
                     }
 
+                }
+                else if (input.ToLower() == "e" || input.ToLower() == "exit")
+                {
+                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.ReadKey();
+                    System.Environment.Exit(0);
                 }
                 else if (input.ToLower() == "h" || input.ToLower() == "heal")
                 {
@@ -297,37 +380,36 @@ namespace MyDungeonApp
                         int damage = (p / 2) - Program.currentPlayer.armorValue;
                         if (damage < 0)
                             damage = 0;
-                        Console.WriteLine(" You lose " + damage + " health. ");
+                        if (Program.currentPlayer.health >= 0)
+                            Console.WriteLine(" You lose " + damage + " health. ");
+                        //DEATH CODE
+                        if (Program.currentPlayer.health <= 0)
+                        {
+                            Console.WriteLine(n + " stands proudly over you. \n You've been murdered by the mighty" + n + "\n    GAME  OVER");
+                            Console.ReadKey();
+                            System.Environment.Exit(0);
+                        }
                     }
 
                 }
                 Console.ReadKey();
-
             }
+           
 
-            int c = Program.currentPlayer.GetCoins();
-            int x = Program.currentPlayer.GetXp();
+
+            int c = rand.Next(10, 50);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("As you stand over your vanquished conquest," + n + ", there body dissovles\n" +
-                "You collect " + c + " GOLD COINS!\n" +
-                "You have gained " + x + " XP! Hooray!");
-
+            Console.WriteLine("\nAs you stand victorious over "+ n +" there body dissolves into the ground. \nYou collect " + c + " on gold coins\n");
             Program.currentPlayer.coins += c;
-            Program.currentPlayer.xp += x;
-
-            if (Program.currentPlayer.CanLevelUp())
-                Program.currentPlayer.LevelUp();
-            Console.Clear();
             Console.ReadKey();
-
 
         }
 
         //RANDOM ENCOUNTERS
         public static string GetName()
         {
-            
-             if(IsChristmas())
+
+            if (IsChristmas())
             {
                 switch (rand.Next(0, 4))
                 {
@@ -385,10 +467,11 @@ namespace MyDungeonApp
             {
                 Console.Write(c);
                 System.Threading.Thread.Sleep(speed);
-            }
-            
+            }//END CLASS
 
-        }
 
-    } //END CLASS
-}//END NAMESPACE
+        }//END NAMESPACE
+
+    }
+}
+

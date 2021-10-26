@@ -66,6 +66,7 @@ namespace MyDungeon
                 flag = true;
                 string input = Console.ReadLine().ToLower();
                 if (input == "fighter")
+                    
                     currentPlayer.currentClass = Player.PlayerClass.Fighter;
                 else if (input == "defender")
                     currentPlayer.currentClass = Player.PlayerClass.Defender;
@@ -73,7 +74,7 @@ namespace MyDungeon
                     currentPlayer.currentClass = Player.PlayerClass.Runner;
                 else
                 {
-                    Console.WriteLine("Please choose a specialty");
+                    Console.WriteLine("Please choose a specialty.");
                     flag = false;
                 }
                
@@ -95,7 +96,6 @@ namespace MyDungeon
                 "You muster up all your strength, and pull yourself out of this sticky situation.\n" +
                 "You find a large wooden door in what appears to be a dungeon.\n" +
                 "You open the door to find your captor is Lord Farquaad?!?!\n", 20);
-           
 
         }//ENDSTART()
 

@@ -51,7 +51,7 @@ namespace DungeonLibrary
                 
                 Console.WriteLine("XP: ");
                 
-                Program.ProgressBar("+", " ", ((decimal)p.xp / (decimal)p.GetLevelUpValue()),25);
+                Program.ProgressBar("+", " ", ((decimal)p.xp / (decimal)p.GetLevelUpValue()),10);
                 
                 //Program.ProgressBar("+", " ",((decimal)p.xp/(decimal)p.GetLevelUpValue()),25);
                 //Wait for input
